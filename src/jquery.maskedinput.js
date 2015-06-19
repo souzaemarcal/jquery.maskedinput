@@ -66,6 +66,10 @@ $.fn.extend({
 			partialPosition,
 			firstNonMaskPos,
 			len;
+		
+		if ((typeof mask) != 'string') {
+                	mask = mask.toString();
+            	}
 
 		if (!mask && this.length > 0) {
 			input = $(this[0]);
